@@ -16,7 +16,7 @@ public class Queue {
 		}
 
 	}
-		//add data into the Queue
+    //add data into the Queue
 	public void enQueue(int data) {
 		if (front == null) {
 			rear = new Node(data);
@@ -30,7 +30,7 @@ public class Queue {
 		length ++;
 
 	}
-      //Print method 
+		//Print Method
 	public void print() {
 		Node temp = front;
 		while(temp != null) {
@@ -38,5 +38,14 @@ public class Queue {
 			temp = temp.next;
 		}
 	}
-
+		//Delete Data From Queue
+	public void deQueue() {
+		if (front != null) {
+			int temp = front.data;
+			front = front.next;
+			length--;
+			return;
+		}
+		
+}
 }
